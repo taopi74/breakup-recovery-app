@@ -1,4 +1,4 @@
- import streamlit as st
+import streamlit as st
 import streamlit_authenticator as stauth
 import firebase_admin
 from firebase_admin import credentials, firestore
@@ -237,3 +237,4 @@ if __name__ == "__main__":
         st.error("Incorrect username or password")
     elif authentication_status is None:
         st.warning("Please log in or create a new account.")
+

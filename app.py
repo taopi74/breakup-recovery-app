@@ -13,13 +13,13 @@ AFREDI_PIC_BASE64 = "/9j/4AAQSkZJRgABAQEASABIAAD/4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAA
 try:
     # For deployment: Load credentials from Streamlit Secrets
     cred = credentials.Certificate(st.secrets["firebase_credentials"])
-    genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+    genai.configure(api_key=st.secrets["AIzaSyCphQ0JUb6g9vbStxedg9uMZht0e_9BI8I"])
 except (KeyError, FileNotFoundError):
     # Fallback for local development if secrets are not found
     try:
         cred = credentials.Certificate("firebase_key.json")
         # ⚠️ Use your real Gemini API Key here for local testing
-        gemini_api_key = "YOUR_GEMINI_API_KEY_HERE" 
+        gemini_api_key = "AIzaSyCphQ0JUb6g9vbStxedg9uMZht0e_9BI8I" 
         genai.configure(api_key=gemini_api_key)
     except Exception as e:
         st.error(f"Local environment error: Could not find 'firebase_key.json' or API key. {e}")
@@ -260,4 +260,5 @@ if __name__ == "__main__":
         st.error("Incorrect username or password")
     elif authentication_status is None:
         st.warning("Please log in or create a new account.")
+
 

@@ -1,0 +1,5 @@
+streamlit==1.44.1
+pillow==11.1.0
+google-cloud-firestore==2.11.0
+streamlit-authenticator==0.2.3  # স্থিতিশীল সংস্করণ
+google-generativeai==0.3.2

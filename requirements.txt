@@ -1,4 +1,4 @@
 streamlit
-streamlit-authenticator==0.3.0
+streamlit-authenticator==0.3.2
 firebase-admin
 google-generativeai
